@@ -1,5 +1,5 @@
 # MCXB 简介
-MCXB是由 My_Jox 开发(个人)的一个Java启动器
+MCXB是由 My_Jox(御蜀小白) 开发(个人)的Java启动器
 
 -Time 2024年5月12日22点10分
 
