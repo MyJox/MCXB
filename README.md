@@ -66,6 +66,9 @@ MCXB是由 My_Jox(御蜀小白) 开发(个人)的Java Minecraft启动器
 </dependency>
 ```
 # Dubug
-  * 写着玩
   * 您猜怎么着
-  * 就是完QaQ
+  * 就是玩，嘿!
+  * Qaq QaQ qaQ
+  * qwq qwe qwd
+  * oco ovo oxo
+  * ywy wuw u-u
