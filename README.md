@@ -67,3 +67,5 @@ MCXB是由 My_Jox(御蜀小白) 开发(个人)的Java Minecraft启动器
 ```
 # Dubug
   * 写着玩
+  * 您猜怎么着
+  * 就是完QaQ
