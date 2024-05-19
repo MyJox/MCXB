@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="vBox" xmlns:fx="http://javafx.com/fxml/1" spacing="10.0" alignment="CENTER">
+    <Text strokeWidth="0.0" text="开发中">
+        <font>
+            <Font name="System Bold" size="50.0"/>
+        </font>
+    </Text>
+</VBox>

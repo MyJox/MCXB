@@ -1,14 +1,10 @@
 package com.mcxb.ysxb;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,36 +13,31 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class test extends Application {
+public class Versionsettings {
+    @FXML
+    public VBox VersVbox;
+    private static String selectedDirectory = "0";
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        // Load the FXML file
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
-        Parent root = loader.load();
-        primaryStage.setTitle("FXML Example");
-
-        // Get the VBox from the FXML file
-        VBox vBox = (VBox) loader.getNamespace().get("vBox");
-
-        // Sample directory path
+    public void VersTings() throws IOException {
         String directoryPath = ".minecraft/versions";
-
-        // Get all subdirectories
         List<String> subDirectories = getSubDirectories(directoryPath);
-
-        // ToggleGroup for RadioButtons
         ToggleGroup toggleGroup = new ToggleGroup();
 
-        // Add RadioButtons dynamically
         for (String directory : subDirectories) {
             RadioButton radioButton = new RadioButton(directory);
             radioButton.setToggleGroup(toggleGroup);
-            vBox.getChildren().add(radioButton);
+            HBox hBox = new HBox();
+            hBox.getChildren().add(radioButton);
+            hBox.setStyle("-fx-background-radius: 10;-fx-background-color: #ffffff;-fx-min-height: 50;-fx-alignment: CENTER_LEFT;-fx-padding: 0 0 0 10;-fx-border-width: 0 0 2 0;-fx-border-color: #3061b2;");
+            VersVbox.getChildren().add(hBox);
         }
 
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                RadioButton selectedRadioButton = (RadioButton) newValue;
+                setSelectedDirectory(selectedRadioButton.getText());
+            }
+        });
     }
 
     private List<String> getSubDirectories(String directoryPath) throws IOException {
@@ -58,7 +49,11 @@ public class test extends Application {
         }
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public String getSelectedDirectory() {
+        return selectedDirectory;
+    }
+
+    public void setSelectedDirectory(String selectedDirectory) {
+        Versionsettings.selectedDirectory = selectedDirectory;
     }
 }
