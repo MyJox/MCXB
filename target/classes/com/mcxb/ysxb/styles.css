@@ -1,0 +1,9 @@
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px 10px;
+}
+.radio-button:selected {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}

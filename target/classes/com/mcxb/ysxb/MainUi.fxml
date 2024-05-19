@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="490.0" prefWidth="760.0" style="-fx-background-color: #ecf7fd;"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mcxb.ysxb.MainUi">
+   <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="${root.height}" prefWidth="205.0"
+         style="-fx-background-color: #feffff; -fx-effect: dropshadow(three-pass-box, #72b9da, 10.0,0, 0, 0); -fx-background-radius: 10;"
+         AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+      </padding>
+      <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="185.0"
+            style="-fx-background-color: #f3fafb; -fx-background-radius: 10;">
+         <VBox.margin>
+            <Insets/>
+         </VBox.margin>
+         <padding>
+            <Insets left="10.0"/>
+         </padding>
+         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/face.png"/>
+         </ImageView>
+         <TextField fx:id="OfflineNickname" prefHeight="25.0" prefWidth="118.0" promptText="离线昵称"
+                    style="-fx-background-color: #fff; -fx-border-style: solid; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <HBox.margin>
+               <Insets left="10.0"/>
+            </HBox.margin>
+         </TextField>
+      </HBox>
+      <VBox prefHeight="356.0" prefWidth="185.0">
+         <VBox.margin>
+            <Insets/>
+         </VBox.margin>
+         <HBox fx:id="Authenticlogin" onMouseClicked="#Authenticloginbut" alignment="CENTER_LEFT"
+               fillHeight="false" prefHeight="33.0" prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-cursor: hand;">
+            <padding>
+               <Insets left="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <ImageView fitHeight="25.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/Login.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="正版登陆" wrappingWidth="80.240234375">
+               <HBox.margin>
+                  <Insets left="10.0"/>
+               </HBox.margin>
+            </Text>
+         </HBox>
+         <HBox fx:id="Versionsettings" onMouseClicked="#Versionsettingsbut" alignment="CENTER_LEFT"
+               fillHeight="false" prefHeight="51.0" prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-cursor: hand;">
+            <padding>
+               <Insets left="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <ImageView fitHeight="41.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+               <Image url="@images/Cooliefear.png"/>
+            </ImageView>
+            <Text fx:id="NoVersionAvailable" strokeType="OUTSIDE" strokeWidth="0.0" text="当前没有版本" textAlignment="CENTER"
+                  wrappingWidth="80.240234375">
+               <HBox.margin>
+                  <Insets left="6.0"/>
+               </HBox.margin>
+            </Text>
+            <Text fill="#006fff" strokeType="OUTSIDE" strokeWidth="0.0" text="正式版">
+               <HBox.margin>
+                  <Insets left="5.0"/>
+               </HBox.margin>
+            </Text>
+         </HBox>
+         <HBox fx:id="ModDownload" onMouseClicked="#ModDownloadbut" alignment="CENTER_LEFT" fillHeight="false"
+               prefHeight="33.0" prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-cursor: hand;">
+            <padding>
+               <Insets left="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <ImageView fitHeight="25.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/mod.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MOD下载" wrappingWidth="129.240234375">
+               <HBox.margin>
+                  <Insets left="10.0"/>
+               </HBox.margin>
+            </Text>
+         </HBox>
+         <HBox alignment="TOP_CENTER" prefHeight="102.0" prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5;">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <VBox prefHeight="80.0" prefWidth="258.0">
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="公告：" wrappingWidth="162.240234375">
+                  <font>
+                     <Font name="System Bold Italic" size="13.0"/>
+                  </font>
+               </Text>
+               <Text fx:id="announcement" strokeType="OUTSIDE" strokeWidth="0.0"
+                     text="HMXB启动器测试版本\r\n\tHMXB启动器测试版本HMXB启动器测试版本"
+                     wrappingWidth="161.240234375">
+                  <VBox.margin>
+                     <Insets top="5.0"/>
+                  </VBox.margin>
+               </Text>
+            </VBox>
+         </HBox>
+         <HBox fx:id="help" onMouseClicked="#helpbut" alignment="CENTER_LEFT" fillHeight="false" prefHeight="33.0"
+               prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-cursor: hand;">
+            <padding>
+               <Insets left="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <ImageView fitHeight="25.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/help.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="帮助" wrappingWidth="85.240234375">
+               <HBox.margin>
+                  <Insets left="10.0"/>
+               </HBox.margin>
+            </Text>
+         </HBox>
+         <HBox fx:id="setup" onMouseClicked="#setupbut" alignment="CENTER_LEFT" fillHeight="false"
+               prefHeight="33.0" prefWidth="185.0"
+               style="-fx-background-color: #feffff; -fx-border-color: #ccc; -fx-border-radius: 5; -fx-cursor: hand;">
+            <padding>
+               <Insets left="10.0"/>
+            </padding>
+            <VBox.margin>
+               <Insets top="10.0"/>
+            </VBox.margin>
+            <ImageView fitHeight="25.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/setup.png"/>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="设置" wrappingWidth="93.240234375">
+               <HBox.margin>
+                  <Insets left="10.0"/>
+               </HBox.margin>
+            </Text>
+         </HBox>
+      </VBox>
+      <Button fx:id="Startgames" onAction="#Startgamesbut" mnemonicParsing="false" prefHeight="39.0"
+              prefWidth="185.0" style="-fx-background-color: #207fff; -fx-background-radius: 10; -fx-cursor: hand;"
+              text="启 动 游 戏" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="16.0"/>
+         </font>
+      </Button>
+   </VBox>
+   <VBox fx:id="contentBox" layoutX="227.0" layoutY="10.0" prefHeight="470.0" prefWidth="523.0"
+         style="-fx-background-color: #feffff; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, #72b9da, 10.0,0, 0, 0);"
+         AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="10.0"
+         AnchorPane.topAnchor="10.0">
+
+   </VBox>
+</AnchorPane>
